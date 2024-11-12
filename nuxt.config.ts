@@ -38,7 +38,8 @@ export default defineNuxtConfig({
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'CONTENT CONTENT CONTENT',
+					content:
+						'LeoParts- Sklep motoryzacyjny Gorzów Wielkopolski,  części samochodowe,opony, warsztaty, tanie części do auta',
 				},
 			],
 			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

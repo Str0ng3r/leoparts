@@ -75,6 +75,7 @@ const submitForm = async (event) => {
 						placeholder="Komentarz"
 						required
 						v-model="comment"
+						maxlength="200"
 					></textarea>
 					<button type="submit">Wysłać</button>
 				</form>
@@ -186,6 +187,7 @@ const submitForm = async (event) => {
 						placeholder="Komentarz"
 						required
 						v-model="comment"
+						maxlength="200"
 					></textarea>
 					<button class="footer__form_button" type="submit">Wysłać</button>
 				</form>
