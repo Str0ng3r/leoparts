@@ -100,15 +100,15 @@ const submitForm = async (event) => {
 			Napis do nas, aby zapytać o szczegóły ta dostępne opcje
 		</p>
 		<div class="wrap_prices">
-			<div class="wrap_price_left">
+			<div class="wrap_price_left" data-aos="fade-up">
 				<p>Amortyzacja od 100 zł</p>
 				<p>Zawieszenia od 30 zł</p>
 				<p>Filtry od 20zł</p>
 				<p>Hamulca od 40 zł</p>
 				<p>Opony od 300 zł</p>
 			</div>
-			<div class="middl_line"></div>
-			<div class="wrap_price_right">
+			<div class="middl_line" data-aos="fade-up"></div>
+			<div class="wrap_price_right" data-aos="fade-up">
 				<p>Oleje i płyny od 10zł</p>
 				<p>Układ wydechowy Od 15zł</p>
 				<p>Paski,łańcuch,rolki od 40zł</p>
