@@ -48,7 +48,7 @@ const submitForm = async (event) => {
 			<div class="total_inform" data-aos="fade-down">
 				<p class="total_inform__location">Gorzow Wlkp. Welniany Rynek 5</p>
 				<p class="total_inform__number">
-					<img src="../assets/img/phone.png" alt="phone" /> +48-792-600-260
+					<nuxt-icon name="phone_footer" filled></nuxt-icon> +48-792-600-260
 				</p>
 			</div>
 		</header>
@@ -95,12 +95,27 @@ const submitForm = async (event) => {
 		</section>
 	</div>
 	<section class="price_section">
-		<h2 class="price_section__title" data-aos="fade-up">
-			Maintenance Service Packages
-		</h2>
+		<h2 class="price_section__title" data-aos="fade-up">Niski ceny</h2>
 		<p class="price_section__desc" data-aos="fade-up">
-			View pricing for additional car repair service packages
+			Napis do nas, aby zapytać o szczegóły ta dostępne opcje
 		</p>
+		<div class="wrap_prices">
+			<div class="wrap_price_left">
+				<p>Amortyzacja od 100 zł</p>
+				<p>Zawieszenia od 30 zł</p>
+				<p>Filtry od 20zł</p>
+				<p>Hamulca od 40 zł</p>
+				<p>Opony od 300 zł</p>
+			</div>
+			<div class="middl_line"></div>
+			<div class="wrap_price_right">
+				<p>Oleje i płyny od 10zł</p>
+				<p>Układ wydechowy Od 15zł</p>
+				<p>Paski,łańcuch,rolki od 40zł</p>
+				<p>Silnik/Osprzęt od 10zł</p>
+				<p>Pozostała kategoria Niskie ceny</p>
+			</div>
+		</div>
 	</section>
 	<div class="container_wrap">
 		<section class="about_services">
@@ -133,7 +148,7 @@ const submitForm = async (event) => {
 		<h1 data-aos="fade-up">Zadzwoń do nas</h1>
 		<p data-aos="fade-up">Szybko odpowiadamy, szybko pomagamy!</p>
 		<h2 data-aos="fade-up">
-			<img src="../assets/img/big_phone.png" alt="phone" /> +48-792-600-260
+			<img src="../assets/img/phone.png" alt="phone" /> +48-792-600-260
 		</h2>
 	</section>
 	<div class="container_wrap">
@@ -218,6 +233,54 @@ header {
 	border: 2px solid #1caffc;
 	background: #a06824;
 	padding: 1.4rem 2rem;
+}
+.wrap_prices {
+	display: flex;
+	width: 100%;
+	gap: 6rem;
+	align-items: center;
+	justify-content: center;
+}
+.wrap_price_left {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	flex-direction: column;
+	p {
+		color: #fff;
+		font-family: Raleway;
+		font-size: 2rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 3.8rem; /* 190% */
+		letter-spacing: 0.144rem;
+		text-transform: uppercase;
+	}
+}
+.middl_line {
+	height: 34rem;
+	width: 2px;
+	background-color: #fff;
+}
+.wrap_price_right {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	flex-direction: column;
+	p {
+		color: #fff;
+		font-family: Raleway;
+		font-size: 2rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 3.8rem; /* 190% */
+		letter-spacing: 0.144rem;
+		text-transform: uppercase;
+	}
 }
 .footer__form {
 	display: flex;
@@ -422,7 +485,7 @@ footer {
 		justify-content: center;
 		gap: 1rem;
 		img {
-			width: 10rem;
+			width: 7rem;
 		}
 	}
 }
@@ -511,6 +574,7 @@ footer {
 	line-height: 3.8rem; /* 158.333% */
 	letter-spacing: 0.144rem;
 	text-transform: uppercase;
+	margin-bottom: 4rem;
 }
 .wrap_slider {
 	width: 100%;

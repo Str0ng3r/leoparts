@@ -105,7 +105,7 @@ const onSlideChange = () => {
 		<swiper-slide
 			><div class="slide_wrap">
 				<img src="../assets/img/items/silnik.png" alt="item" class="item_img" />
-				<h2 class="name_item">Silnik</h2>
+				<h2 class="name_item">Osprzęt</h2>
 			</div></swiper-slide
 		>
 		<swiper-slide
