@@ -128,10 +128,7 @@ const submitForm = async (event) => {
 			<div class="wrap_points">
 				<div class="wrap_point_text" data-aos="fade-right">
 					<img src="../assets/img/knowledge.png" alt="brain" />
-					<h2>
-						Profesjonalne doradztwo i dobór części zamiennych do Twojego
-						samochodu!
-					</h2>
+					<h2>Profesjonalne doradztwo i dobór części zamiennych</h2>
 				</div>
 				<div class="wrap_point_text" data-aos="fade-up">
 					<img src="../assets/img/delivery.png" alt="delivery" />
@@ -219,6 +216,69 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@include t {
+		flex-direction: column;
+		height: auto;
+		padding: 0 4rem;
+	}
+}
+.total_inform__location {
+	color: #2b2b2b;
+	font-family: Raleway;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2.1875rem; /* 194.444% */
+	@include mob {
+		font-size: 1.4rem;
+	}
+}
+.total_inform__number {
+	color: #000;
+	font-family: Raleway;
+	font-size: 3rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 3rem; /* 100% */
+	text-transform: uppercase;
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	justify-content: center;
+	@include m {
+		font-size: 2.4rem;
+	}
+}
+.total_inform__number img {
+	width: 4rem;
+}
+.title_logo {
+	color: #000;
+	font-family: Poppins;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+}
+.title_logo span {
+	color: #a06824;
+	font-family: Poppins;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+}
+.total_inform {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
+	@include m {
+		gap: 1rem;
+		flex-direction: column;
+	}
 }
 .footer__form_button {
 	color: #fff;
@@ -240,6 +300,15 @@ header {
 	gap: 6rem;
 	align-items: center;
 	justify-content: center;
+	@include m {
+		gap: 3rem;
+	}
+	@include t {
+		gap: 1.4rem;
+	}
+	@include mob {
+		flex-direction: column;
+	}
 }
 .wrap_price_left {
 	width: 100%;
@@ -248,21 +317,40 @@ header {
 	justify-content: flex-start;
 	gap: 1rem;
 	flex-direction: column;
+	@include m {
+		gap: 2.6rem;
+	}
+	@include t {
+		gap: 1.4rem;
+	}
 	p {
 		color: #fff;
 		font-family: Raleway;
 		font-size: 2rem;
 		font-style: normal;
 		font-weight: 600;
-		line-height: 3.8rem; /* 190% */
+		line-height: 3rem; /* 190% */
 		letter-spacing: 0.144rem;
 		text-transform: uppercase;
+		@include m {
+			font-size: 1.6rem;
+			justify-content: center;
+			text-align: center;
+			line-height: 2.4rem;
+		}
+		@include t {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
 	}
 }
 .middl_line {
 	height: 34rem;
 	width: 2px;
 	background-color: #fff;
+	@include mob {
+		display: none;
+	}
 }
 .wrap_price_right {
 	width: 100%;
@@ -277,9 +365,19 @@ header {
 		font-size: 2rem;
 		font-style: normal;
 		font-weight: 600;
-		line-height: 3.8rem; /* 190% */
+		line-height: 3rem; /* 190% */
 		letter-spacing: 0.144rem;
 		text-transform: uppercase;
+		@include m {
+			font-size: 1.6rem;
+			justify-content: center;
+			text-align: center;
+			line-height: 2.4rem;
+		}
+		@include t {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
 	}
 }
 .footer__form {
@@ -287,9 +385,14 @@ header {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	width: 100rem;
-	max-width: 57rem;
+	max-width: 100rem;
+	width: 100%;
 	gap: 2rem;
+	@include m {
+		align-items: center;
+	}
+	@include t {
+	}
 	input {
 		border-radius: 0.2rem;
 		border: 2px solid #374351;
@@ -338,6 +441,11 @@ header {
 	align-items: flex-start;
 	flex-direction: column;
 	justify-content: flex-start;
+	padding: 0 4rem;
+	width: 100%;
+	@include m {
+		width: auto;
+	}
 	p {
 		display: flex;
 		align-items: center;
@@ -350,12 +458,18 @@ header {
 		line-height: 3rem; /* 250% */
 		margin-bottom: 1rem;
 		gap: 1rem;
+		@include t {
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+		}
 	}
 }
 .footer__right_wrapper {
 	align-items: flex-start;
 	flex-direction: column;
 	justify-content: flex-start;
+	width: 100%;
+	padding: 0 4rem;
 }
 .wrap_form_contacts {
 	width: 100%;
@@ -363,6 +477,12 @@ header {
 	align-items: flex-start;
 	justify-content: center;
 	gap: 9rem;
+	max-width: 134rem;
+	@include m {
+		flex-direction: column-reverse;
+		align-items: center;
+		gap: 4rem;
+	}
 }
 footer {
 	background: #232a33;
@@ -372,6 +492,9 @@ footer {
 	align-items: center;
 	justify-content: center;
 	padding: 8.4rem 0rem 3rem 0rem;
+	@include m {
+		padding: 6rem 0rem 3rem 0rem;
+	}
 }
 .footer__title {
 	color: #fff;
@@ -407,6 +530,13 @@ footer {
 	gap: 1rem;
 	margin-top: 4rem;
 	width: 100%;
+	@include m {
+		gap: 2rem;
+	}
+	@include t {
+		flex-direction: column;
+		gap: 4rem;
+	}
 }
 .wrap_slider_review {
 	display: flex;
@@ -419,6 +549,9 @@ footer {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	@include m {
+		padding: 7rem 4rem;
+	}
 	h2 {
 		color: #2b2b2b;
 		text-align: center;
@@ -436,26 +569,37 @@ footer {
 }
 .section_number {
 	width: 100%;
-	height: 52rem;
+	height: 40rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 15rem 0;
+	padding: 12rem 0;
 	background-image: url('../assets/img/back_number.png');
 	background-attachment: fixed;
 	background-size: cover;
+	@include t {
+		background-size: cover;
+		padding: 8rem 0;
+		height: 28rem;
+	}
+
 	h1 {
 		color: #fff;
 		text-align: center;
 		font-family: Raleway;
-		font-size: 4rem;
+		font-size: 3.4rem;
 		font-style: normal;
 		font-weight: 800;
-		line-height: 4rem; /* 100% */
+		line-height: 3.4rem; /* 100% */
 		letter-spacing: 0.24rem;
 		text-transform: uppercase;
 		margin-bottom: 2.8rem;
+		@include t {
+			font-size: 2.8rem;
+			line-height: 2.8rem; /* 100% */
+			margin-bottom: 2rem;
+		}
 	}
 	p {
 		color: #fff;
@@ -468,29 +612,50 @@ footer {
 		letter-spacing: 0.144rem;
 		text-transform: uppercase;
 		margin-bottom: 3rem;
+		@include t {
+			font-size: 2rem;
+			line-height: 2.4rem; /* 100% */
+			margin-bottom: 2rem;
+		}
 	}
 	h2 {
 		color: #fff;
 		text-align: center;
-		/* demo.templatemonster.com/Semantic/Link */
 		font-family: Raleway;
-		font-size: 8rem;
+		font-size: 6rem;
 		font-style: normal;
 		font-weight: 800;
-		line-height: 9.7rem; /* 121.25% */
+		line-height: 6rem; /* 121.25% */
 		letter-spacing: 0.48rem;
 		text-transform: uppercase;
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;
 		gap: 1rem;
+		@include t {
+			font-size: 3rem;
+			line-height: 3rem;
+		}
+		@include mob {
+			font-size: 2.4rem;
+			line-height: 2.4rem;
+		}
 		img {
 			width: 7rem;
+			@include m {
+				width: 6rem;
+			}
+			@include t {
+				width: 3rem;
+			}
 		}
 	}
 }
 .wrap_slider:deep(.swiper) {
 	padding-right: 4rem !important;
+	@include mob {
+		padding-right: 0rem !important;
+	}
 }
 .wrap_point_text {
 	display: flex;
@@ -499,6 +664,13 @@ footer {
 	flex-direction: column;
 	gap: 2rem;
 	max-width: 20rem;
+	@include m {
+		max-width: 16rem;
+	}
+	@include t {
+		max-width: 30rem;
+		width: 100%;
+	}
 	img {
 		width: 100%;
 	}
@@ -512,6 +684,10 @@ footer {
 		line-height: 1.8rem; /* 100% */
 		letter-spacing: 0.24rem;
 		text-transform: uppercase;
+		@include t {
+			font-size: 2rem;
+			line-height: 2rem; /* 100% */
+		}
 	}
 }
 .about_services__title {
@@ -525,6 +701,10 @@ footer {
 	letter-spacing: 0.24rem;
 	text-transform: uppercase;
 	margin-bottom: 2.7rem;
+	@include t {
+		font-size: 2.4rem;
+		line-height: 2.4rem; /* 100% */
+	}
 }
 .about_services__desc {
 	color: #2b2b2b;
@@ -536,6 +716,10 @@ footer {
 	line-height: 3.8rem; /* 158.333% */
 	letter-spacing: 0.144rem;
 	text-transform: uppercase;
+	@include t {
+		font-size: 2rem;
+		line-height: 2.2rem; /* 158.333% */
+	}
 }
 .about_services {
 	display: flex;
@@ -551,6 +735,12 @@ footer {
 	// width: 99.6vw;
 	background: #232a33;
 	width: 100%;
+	@include m {
+		padding: 6rem 10rem;
+	}
+	@include t {
+		padding: 3rem 6rem;
+	}
 }
 .price_section__title {
 	color: #fff;
@@ -563,6 +753,10 @@ footer {
 	letter-spacing: 0.24rem;
 	text-transform: uppercase;
 	margin-bottom: 2.4rem;
+	@include m {
+		font-size: 4rem;
+		line-height: 4.1rem;
+	}
 }
 .price_section__desc {
 	color: #fff;
@@ -571,10 +765,17 @@ footer {
 	font-size: 2.4rem;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 3.8rem; /* 158.333% */
+	line-height: 3rem; /* 158.333% */
 	letter-spacing: 0.144rem;
 	text-transform: uppercase;
 	margin-bottom: 4rem;
+	@include m {
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+	}
+	@include t {
+		font-size: 1.4rem;
+	}
 }
 .wrap_slider {
 	width: 100%;
@@ -599,6 +800,16 @@ footer {
 	justify-content: center;
 	gap: 2.6rem;
 	margin-bottom: 6rem;
+	@include m {
+		margin-bottom: 3rem;
+	}
+	@include t {
+		margin-bottom: 2rem;
+		gap: 1.6rem;
+		font-size: 2.4rem;
+		line-height: 2.4rem; /* 100% */
+	}
+
 	span {
 		color: #2b2b2b;
 		text-align: center;
@@ -609,6 +820,14 @@ footer {
 		line-height: 3.8rem; /* 158.333% */
 		letter-spacing: 0.144rem;
 		text-transform: uppercase;
+		@include t {
+			font-size: 1.8rem;
+			line-height: 2rem; /* 100% */
+		}
+		@include mob {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
 	}
 }
 
@@ -619,6 +838,15 @@ footer {
 	align-items: center;
 	justify-content: center;
 	padding: 8rem 6rem 4rem 6rem;
+	@include m {
+		padding: 4rem 5rem 4rem 5rem;
+	}
+	@include t {
+		padding: 3rem 2rem 4rem 2rem;
+	}
+	@include mob {
+		padding: 3rem 1rem 4rem 1rem;
+	}
 }
 .form-container {
 	background-color: #b07c4e;
@@ -628,16 +856,27 @@ footer {
 	max-height: 44.8rem;
 	width: 100%;
 	text-align: center;
+	@include t {
+		max-width: 38rem;
+		max-height: 50rem;
+	}
 	.title_form {
 		color: #fff;
 		font-family: Raleway;
 		font-size: 1.8rem;
 		font-style: normal;
 		font-weight: 900;
-		line-height: 3rem; /* 150% */
+		line-height: 2.4rem; /* 150% */
 		letter-spacing: 0.18rem;
 		text-transform: uppercase;
 		margin-bottom: 1rem;
+		@include t {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
+		@include mob {
+			font-size: 1rem;
+		}
 	}
 
 	form {
@@ -707,55 +946,16 @@ main {
 	align-items: center;
 	justify-content: flex-start;
 	padding: 2rem 8rem;
-}
-
-.total_inform__location {
-	color: #2b2b2b;
-	font-family: Raleway;
-	font-size: 1.8rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 2.1875rem; /* 194.444% */
-}
-.total_inform__number {
-	color: #000;
-	font-family: Raleway;
-	font-size: 3rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 3rem; /* 100% */
-	text-transform: uppercase;
-	display: flex;
-	align-items: flex-start;
-	gap: 1rem;
-	justify-content: center;
-}
-.total_inform__number img {
-	width: 4rem;
-}
-.title_logo {
-	color: #000;
-	font-family: Poppins;
-	font-size: 2rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-	text-transform: uppercase;
-}
-.title_logo span {
-	color: #a06824;
-	font-family: Poppins;
-	font-size: 2rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-	text-transform: uppercase;
-}
-.total_inform {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 5rem;
+	@include m {
+		background-size: cover;
+	}
+	@include t {
+		align-items: center;
+		justify-content: center;
+		min-height: 58rem;
+		background-size: cover;
+		padding: 2rem 4rem;
+	}
 }
 .container_wrap {
 	max-width: 134rem;
@@ -766,6 +966,15 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	@include m {
+		max-width: 100rem;
+	}
+	@include t {
+		max-width: 60rem;
+	}
+	@include mob {
+		max-width: 40rem;
+	}
 }
 .logotip {
 	height: 8.7rem;

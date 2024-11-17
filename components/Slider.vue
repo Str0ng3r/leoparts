@@ -87,7 +87,10 @@ const onSlideChange = () => {
 		<swiper-slide
 			><div class="slide_wrap">
 				<img src="../assets/img/items/zawi.png" alt="item" class="item_img" />
-				<h2 class="name_item">Zawieszenie, wahacze</h2>
+				<h2 class="name_item">
+					Zawieszenie <br />
+					wahacze
+				</h2>
 			</div></swiper-slide
 		>
 		<swiper-slide
@@ -99,7 +102,10 @@ const onSlideChange = () => {
 		<swiper-slide
 			><div class="slide_wrap">
 				<img src="../assets/img/items/paski.png" alt="item" class="item_img" />
-				<h2 class="name_item">Paski, łańcuchy, rolki</h2>
+				<h2 class="name_item">
+					Paski <br />
+					łańcuchy
+				</h2>
 			</div></swiper-slide
 		>
 		<swiper-slide
@@ -124,7 +130,16 @@ const onSlideChange = () => {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 24rem;
+	width: 22rem;
+	@include m {
+		max-width: 16rem;
+	}
+	@include t {
+		max-width: 12rem;
+	}
+	@include mob {
+		max-width: 12rem;
+	}
 }
 .item_img {
 	width: 100%;
@@ -133,15 +148,27 @@ const onSlideChange = () => {
 	color: #000;
 	text-align: center;
 	font-family: Raleway;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-style: normal;
 	font-weight: 800;
-	line-height: 2rem; /* 100% */
+	line-height: 1.8rem; /* 100% */
 	letter-spacing: 0.24rem;
 	text-transform: uppercase;
+	@include m {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
 }
 .end_item {
 	margin-right: 4rem;
+}
+:deep(.swiper-slide) {
+	@include m {
+		margin-right: 100px !important;
+	}
+	@include t {
+		margin-right: 130px !important;
+	}
 }
 /* You can adjust the container styling as needed */
 </style>
