@@ -83,9 +83,9 @@ const submitForm = async (event) => {
 		</main>
 		<section class="about_sell">
 			<h2 class="about_sell__title" data-aos="fade-up">
-				Co sprzedajemy
+				Co sprzedajemy?
 				<span
-					>Rodzaje części zamiennych i ich <br />
+					>różne rodzaje części zamiennych i ich <br />
 					kategorie w naszej ofercie!</span
 				>
 			</h2>
@@ -95,23 +95,23 @@ const submitForm = async (event) => {
 		</section>
 	</div>
 	<section class="price_section">
-		<h2 class="price_section__title" data-aos="fade-up">Niski ceny</h2>
+		<h2 class="price_section__title" data-aos="fade-up">Niskie ceny</h2>
 		<p class="price_section__desc" data-aos="fade-up">
-			Napis do nas, aby zapytać o szczegóły ta dostępne opcje
+			Napisz do nas, aby zapytać o szczegóły i dostępne opcje
 		</p>
 		<div class="wrap_prices">
 			<div class="wrap_price_left" data-aos="fade-up">
 				<p>Amortyzacja od 100 zł</p>
 				<p>Zawieszenia od 30 zł</p>
 				<p>Filtry od 20zł</p>
-				<p>Hamulca od 40 zł</p>
+				<p>Hamulce od 40 zł</p>
 				<p>Opony od 300 zł</p>
 			</div>
 			<div class="middl_line" data-aos="fade-up"></div>
 			<div class="wrap_price_right" data-aos="fade-up">
 				<p>Oleje i płyny od 10zł</p>
 				<p>Układ wydechowy Od 15zł</p>
-				<p>Paski,łańcuch,rolki od 40zł</p>
+				<p>Paski,łańcuchy,rolki od 40zł</p>
 				<p>Silnik/Osprzęt od 10zł</p>
 				<p>Pozostała kategoria Niskie ceny</p>
 			</div>
@@ -171,7 +171,7 @@ const submitForm = async (event) => {
 		></iframe>
 	</section>
 	<footer>
-		<h1 class="footer__title" data-aos="fade-up">kontakty</h1>
+		<h1 class="footer__title" data-aos="fade-up">kontakt</h1>
 		<div class="wrap_form_contacts">
 			<div class="footer__left_wrapper" data-aos="fade-right">
 				<p>
