@@ -184,6 +184,22 @@ const submitForm = async (event) => {
 					,sob(8:00 - 13:30)
 				</p>
 				<p><nuxt-icon name="mails" filled></nuxt-icon>leoparts21@gmail.com</p>
+				<div class="wrap_icons">
+					<a href="tel:+48792600260"
+						><nuxt-icon name="whatsapp" filled class="whatsapp_icon"></nuxt-icon
+					></a>
+					<a href="https://www.facebook.com/profile.php?id=61566843227111"
+						><nuxt-icon name="facebook" filled class="facebook_icon"></nuxt-icon
+					></a>
+					<a
+						href="https://www.instagram.com/leoparts_sklep_motoryzacjny?utm_source=qr&igsh=MWU1aXJ0M3E0MGV6cw=="
+						><nuxt-icon
+							name="instagram"
+							filled
+							class="instagram_icon"
+						></nuxt-icon
+					></a>
+				</div>
 			</div>
 			<div class="footer__right_wrapper" data-aos="fade-left">
 				<form class="footer__form" @submit="submitForm">
@@ -221,6 +237,31 @@ header {
 		height: auto;
 		padding: 0 4rem;
 	}
+}
+.whatsapp_icon:hover.whatsapp_icon:deep(svg > path) {
+	fill: #4da560;
+}
+.whatsapp_icon:hover {
+	cursor: pointer;
+}
+.facebook_icon:hover.facebook_icon:deep(svg > path) {
+	fill: #506dee;
+}
+.facebook_icon:hover {
+	cursor: pointer;
+}
+.instagram_icon:hover.instagram_icon:deep(svg > path) {
+	fill: #a750ee;
+}
+.instagram_icon:hover {
+	cursor: pointer;
+}
+.wrap_icons {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
 }
 .total_inform__location {
 	color: #2b2b2b;
