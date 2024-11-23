@@ -262,6 +262,9 @@ header {
 	align-items: center;
 	justify-content: center;
 	margin-top: 1rem;
+	@include m {
+		margin: 0 auto;
+	}
 }
 .total_inform__location {
 	color: #2b2b2b;
