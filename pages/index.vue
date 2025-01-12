@@ -58,7 +58,13 @@ const submitForm = async (event) => {
 					Wypełnij formularz zgłoszeniowy otrzymasz odpowiedź zwrotną!
 				</h2>
 			</form> -->
-			<div class="form-container" data-aos="fade-right">
+			<a
+				href="tel:
+792 600 260"
+				class="button_napisz"
+				>Zadzwoń do nas już teraz</a
+			>
+			<!-- <div class="form-container" data-aos="fade-right">
 				<h2 class="title_form">
 					Wypełnij formularz zgłoszeniowy<br />Otrzymasz odpowiedź zwrotną!
 				</h2>
@@ -79,7 +85,7 @@ const submitForm = async (event) => {
 					></textarea>
 					<button type="submit">Wysłać</button>
 				</form>
-			</div>
+			</div> -->
 		</main>
 		<section class="about_sell">
 			<h2 class="about_sell__title" data-aos="fade-up">
@@ -276,6 +282,29 @@ header {
 	@include mob {
 		font-size: 1.4rem;
 	}
+}
+.button_napisz {
+	color: #ffffff;
+	font-family: Raleway;
+	font-size: 1.8rem;
+	font-style: normal;
+	text-align: center;
+	font-weight: 600;
+	line-height: 2.1875rem; /* 194.444% */
+	background-color: #a06824;
+	padding: 2rem;
+	width: 50%;
+	border-radius: 1rem;
+	@include m {
+		width: 100%;
+	}
+}
+.button_napisz:hover {
+	color: #ffffff;
+	font-family: Raleway;
+	font-size: 2rem;
+	font-weight: 700;
+	font-style: normal;
 }
 .total_inform__number {
 	color: #000;
