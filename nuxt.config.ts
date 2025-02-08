@@ -43,6 +43,22 @@ export default defineNuxtConfig({
 				},
 			],
 			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+			script: [
+				{
+					src: 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js',
+					type: 'text/javascript',
+				},
+				{
+					type: 'text/javascript',
+					children: `
+            (function(){
+              emailjs.init({
+                publicKey: "GnmHBjiFEu_ST15NK",
+              });
+            })();
+          `,
+				},
+			],
 		},
 	},
 	compatibilityDate: '2024-04-03',

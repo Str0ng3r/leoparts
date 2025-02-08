@@ -5,7 +5,36 @@ const name = ref('');
 const mail = ref('');
 const comment = ref('');
 const phoneNumb = ref('');
+const sendMail = async () => {
+	event.preventDefault();
+	try {
+		const templateParams = {
+			name: name.value,
+			email: mail.value,
+			message: comment.value,
+			number: Number(phoneNumb.value),
+		};
 
+		const response = await emailjs.send(
+			'service_ils8llq', // Замени на свой Service ID
+			'template_lt7zh22', // Замени на свой Template ID
+			templateParams,
+			'GnmHBjiFEu_ST15NK' // Твой Public Key
+		);
+
+		console.log('Письмо успешно отправлено:', response);
+		alert('Ваше сообщение отправлено!');
+
+		// Очищаем форму после успешной отправки
+		name.value = '';
+		mail.value = '';
+		comment.value = '';
+		phoneNumb.value = '';
+	} catch (error) {
+		console.error('Ошибка при отправке письма:', error);
+		alert('Ошибка при отправке письма. Попробуйте позже.');
+	}
+};
 const submitForm = async (event) => {
 	// Предотвращаем стандартное поведение формы, чтобы избежать перезагрузки страницы
 	event.preventDefault();
@@ -58,17 +87,17 @@ const submitForm = async (event) => {
 					Wypełnij formularz zgłoszeniowy otrzymasz odpowiedź zwrotną!
 				</h2>
 			</form> -->
-			<a
+			<!-- <a
 				href="tel:
 792 600 260"
 				class="button_napisz"
 				>Zadzwoń do nas już teraz</a
-			>
-			<!-- <div class="form-container" data-aos="fade-right">
+			> -->
+			<div class="form-container" data-aos="fade-right">
 				<h2 class="title_form">
 					Wypełnij formularz zgłoszeniowy<br />Otrzymasz odpowiedź zwrotną!
 				</h2>
-				<form @submit="submitForm">
+				<form @submit="sendMail">
 					<input type="text" placeholder="Imię" required v-model="name" />
 					<input
 						type="tel"
@@ -85,7 +114,7 @@ const submitForm = async (event) => {
 					></textarea>
 					<button type="submit">Wysłać</button>
 				</form>
-			</div> -->
+			</div>
 		</main>
 		<section class="about_sell">
 			<h2 class="about_sell__title" data-aos="fade-up">
@@ -208,7 +237,7 @@ const submitForm = async (event) => {
 				</div>
 			</div>
 			<div class="footer__right_wrapper" data-aos="fade-left">
-				<form class="footer__form" @submit="submitForm">
+				<form class="footer__form" @submit="sendMail">
 					<input type="text" placeholder="Imię" required v-model="name" />
 					<input
 						type="tel"
