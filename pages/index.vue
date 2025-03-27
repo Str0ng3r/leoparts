@@ -97,7 +97,33 @@ const submitForm = async (event) => {
 				<h2 class="title_form">
 					Wypełnij formularz zgłoszeniowy<br />Otrzymasz odpowiedź zwrotną!
 				</h2>
-				<form @submit="sendMail">
+				<form
+					action="https://formspree.io/f/mqapello"
+					method="POST"
+					class="main_form"
+				>
+					<label>
+						Your name:
+						<textarea name="message" placeholder="Andrzej"></textarea>
+					</label>
+					<label>
+						Your email:
+						<input type="email" name="email" placeholder="user@gmail.com" />
+					</label>
+					<label>
+						Your number:
+						<input type="phone" name="nubmer" placeholder="+48000000000" />
+					</label>
+					<label>
+						Your message:
+						<textarea
+							name="message"
+							placeholder="Chcę kupić część samochodową"
+						></textarea>
+					</label>
+					<button type="submit">Send</button>
+				</form>
+				<!-- <form @submit="sendMail">
 					<input type="text" placeholder="Imię" required v-model="name" />
 					<input
 						type="tel"
@@ -113,7 +139,7 @@ const submitForm = async (event) => {
 						maxlength="200"
 					></textarea>
 					<button type="submit">Wysłać</button>
-				</form>
+				</form> -->
 			</div>
 		</main>
 		<section class="about_sell">
@@ -260,6 +286,10 @@ const submitForm = async (event) => {
 </template>
 
 <style scoped lang="scss">
+.main_form {
+	width: 100%;
+	gap: 0.4rem;
+}
 header {
 	width: 100%;
 	height: 10rem;
@@ -984,7 +1014,7 @@ footer {
 	form {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1rem;
 
 		input,
 		textarea {
@@ -994,6 +1024,7 @@ footer {
 			padding: 10px;
 			height: 4rem;
 			color: #232a33;
+			width: 100%;
 			font-family: Raleway;
 			font-size: 1.4rem;
 			font-style: normal;
